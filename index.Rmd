@@ -1,0 +1,50 @@
+---
+title: "R Validation Workshop"
+date: "October, 2020"
+output:
+  prettydoc::html_pretty:
+    theme: hpstr
+    toc: yes
+    css: style.css
+toc-title: "Table of Contents"
+---
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, results = "hide", error = FALSE,
+                      warning = FALSE, message = FALSE)
+
+```
+
+<hr>
+
+<!---------------------------------------------------------------------------->
+
+## Welcome
+
+Coming soon.
+
+<!---------------------------------------------------------------------------->
+
+## Prepare for the workshop
+
+Coming soon.
+
+<!---------------------------------------------------------------------------->
+
+## Slides
+
+Coming soon.
+
+
+<!---------------------------------------------------------------------------->
+
+## More information
+
+R Validation Hub is a cross-industry initiative whose mission
+is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
+
+To learn more about the work we do, please go to [pharmar.org](https://www.pharmar.org).
+
+
