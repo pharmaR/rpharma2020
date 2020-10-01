@@ -1,3 +1,7 @@
 .header-title {
-  background-color: #467fbf;
+  background-color: white;
+  background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+  background-size: 20%;
 }
+
