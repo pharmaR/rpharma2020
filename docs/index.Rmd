@@ -1,6 +1,8 @@
 ---
-title: "R Validation Workshop"
-date: "October, 2020"
+title: |
+  | A Risk-based Approach to R Validation
+subtitle: "Workshop - R/Pharma 2020"
+date: "October 6th, 2020"
 output:
   prettydoc::html_pretty:
     theme: hpstr
