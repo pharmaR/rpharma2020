@@ -10,3 +10,13 @@
   /*color: #4D8DC9;*/
 }
 
+/* Subtitle */
+.header-title h2 {
+  color: black;
+  /*color: #4D8DC9;*/
+  text-transform: none;
+  size: 12px;
+  font-style: italic;
+  text-shadow: rgba(34, 34, 34, 0.6) 1px 1px 4px;
+}
+
