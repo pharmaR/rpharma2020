@@ -59,7 +59,9 @@ Before the workshop, we will send out a link to the RStudio Cloud space we will 
 
 ## Slides
 
-Coming soon.
+- Intro (Coming soon)
+- Risk Assessment (Coming soon)
+- Responding to a Risk Assessment (Coming soon)
 
 
 <!---------------------------------------------------------------------------->
