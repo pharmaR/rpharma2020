@@ -27,7 +27,27 @@ knitr::opts_chunk$set(echo = TRUE, results = "hide", error = FALSE,
 
 ## The workshop
 
-Coming soon.
+### Presenters
+
+- Andy Nicholls, GSK
+- Marly Gotti, Biogen
+
+### Overview
+
+In this workshop we will walk through an implementation of the R Validation Hub's white paper: [A Risk-based Approach for Assessing R Package Accuracy within a Validated Infrastructure](https://www.pharmar.org/white-paper/). The workshop will explore two core themes:
+
+1. R Packages Risk Assessment
+2. Testing 
+
+In part 1, we will use a small set of pre-selected R packages to see how the R Validation Hub's Risk Assessment Application and the [riskmetric](https://pharmar.github.io/riskmetric/articles/riskmetric.html) R package can be used to create risk assessment reports for an R package.
+
+In part 2, we will discuss how testing can be used to reduce the risk for those packages with high risk. In particular, we will discuss the testing philosophy with respect to software validation and demonstrate how the `testthat` package can be used to perform the necessary steps to test traceability requirements.
+
+<!---------------------------------------------------------------------------->
+
+## Prerequisites
+
+Prior knowledge of the basic structure of R packages is required for the second part of this workshop.
 
 <!---------------------------------------------------------------------------->
 
