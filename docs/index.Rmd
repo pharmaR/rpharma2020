@@ -63,10 +63,17 @@ Before the workshop, we will send out a link to the RStudio Cloud space we will 
 - Risk Assessment (Coming soon)
 - Responding to a Risk Assessment (Coming soon)
 
+<!---------------------------------------------------------------------------->
+
+## Resources
+
+- GitHub repository for `riskmetric`: https://github.com/pharmaR/riskmetric
+- GitHub repository for the Risk Assessment Shiny Application: https://github.com/pharmaR/risk_assessment
+- R Validation Hub's white paper: https://www.pharmar.org/white-paper/
 
 <!---------------------------------------------------------------------------->
 
-## More information
+## The R Validation Hub
 
 R Validation Hub is a cross-industry initiative whose mission
 is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
