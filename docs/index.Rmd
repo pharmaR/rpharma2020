@@ -8,6 +8,8 @@ output:
     theme: hpstr
     toc: yes
     css: style.css
+    # includes:
+    #   after_body: footer.Rhtml
 toc-title: "Table of Contents"
 ---
 
@@ -23,7 +25,7 @@ knitr::opts_chunk$set(echo = TRUE, results = "hide", error = FALSE,
 
 <!---------------------------------------------------------------------------->
 
-## Welcome
+## The workshop
 
 Coming soon.
 
