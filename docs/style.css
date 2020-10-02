@@ -1,19 +1,17 @@
 .header-title {
   background-color: white;
   background-image: url(../images/logo.png);
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: 20%;
 }
 
 .header-title h1 {
-  color: black;
-  /*color: #4D8DC9;*/
+  color: #4D8DC9;
 }
 
 /* Subtitle */
 .header-title h2 {
-  color: black;
-  /*color: #4D8DC9;*/
+  color: #4D8DC9;
   text-transform: none;
   size: 12px;
   font-style: italic;
@@ -21,12 +19,18 @@
 }
 
 .header-title h3 {
-  color: black;
-  /*color: #4D8DC9;*/
+  color: #4D8DC9;
+}
+
+h1, h2, h3 {
+  color: #4D8DC9;
+}
+
+a {
+  color: #82B3FF !important;
 }
 
 #main {
   background-color: #68B8E5;
-  /*background-image: url(../images/pharmaRlogo_large.png);*/
 }
 
