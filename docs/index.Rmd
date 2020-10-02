@@ -53,7 +53,7 @@ Prior knowledge of the basic structure of R packages is required for the second 
 
 ## Prepare for the workshop
 
-Coming soon.
+Before the workshop, we will send out a link to the RStudio Cloud space we will use for the workshop. After clicking the link you will be prompted to log in or create an account if you do not have one. Afterwards click the button to 'Join Space'. On the Projects tab, you will see the project '??', which we will use in class.
 
 <!---------------------------------------------------------------------------->
 
