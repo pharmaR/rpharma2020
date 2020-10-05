@@ -41,7 +41,7 @@ In this workshop we will walk through an implementation of the R Validation Hub'
 
 In part 1, we will use a set of pre-selected R packages to see how the R Validation Hub's Risk Assessment Application and the [riskmetric](https://pharmar.github.io/riskmetric/articles/riskmetric.html) R package can be used to create risk assessment reports for an R package.
 
-In part 2, we will discuss how testing can be used to reduce the risk for those packages with high risk. In particular, we will discuss the testing philosophy with respect to software validation and demonstrate how the `testthat` package can be used to perform the necessary steps to test traceability requirements.
+In part 2, we will discuss how testing can be used to reduce the risk for those packages with high risk. In particular, we will discuss the testing philosophy with respect to software validation and demonstrate how the `testthat` package can be used to perform the necessary steps to follow traceability requirements.
 
 <!---------------------------------------------------------------------------->
 
