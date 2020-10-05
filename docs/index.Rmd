@@ -28,49 +28,32 @@ knitr::opts_chunk$set(echo = TRUE, results = "hide", error = FALSE,
 
 <!---------------------------------------------------------------------------->
 
-## The workshop
-
-### Presenters
+## Presenters
 
 - Andy Nicholls, GSK
 - Marly Gotti, Biogen
 
-### Welcome
+## Welcome
 
 Thank you for enrolling in this workshop! 
 
 In this site you can find information about the workshop as well as the steps you need to follow to prepare for it.
 
-### Overview
+## Overview
 
-In the workskop, we will walk through an implementation of the R Validation Hub's white paper: [A Risk-based Approach for Assessing R Package Accuracy within a Validated Infrastructure](https://www.pharmar.org/white-paper/). The workshop will explore two core themes:
+The workshop will last three hours, starting at **12pm EST** on **October 6th, 2020**.
+
+In the workshop we will walk through an implementation of the R Validation Hub's white paper: [A Risk-based Approach for Assessing R Package Accuracy within a Validated Infrastructure](https://www.pharmar.org/white-paper/). The workshop will explore two core themes:
 
 1. R Packages Risk Assessment
 2. Testing 
 
 In part 1, we will use a set of pre-selected R packages to see how the R Validation Hub's Risk Assessment Application and the [riskmetric](https://pharmar.github.io/riskmetric/articles/riskmetric.html) R package can be used to create risk assessment reports for an R package.
 
-In part 2, we will discuss how testing can be used to reduce the risk for those packages with high risk. In particular, we will discuss the testing philosophy with respect to software validation and demonstrate how the `testthat` package can be used to perform the necessary steps to follow traceability requirements.
+In part 2, we will discuss how testing can be used to reduce the risk for those packages with high risk. In particular, we will discuss the testing philosophy with respect to software validation and demonstrate how the `testthat` package can be used to perform the necessary steps to follow traceability requirements. Prior knowledge of the basic structure of R packages is required for the second part of this workshop.
 
-<!---------------------------------------------------------------------------->
 
-## Prerequisites
-
-Prior knowledge of the basic structure of R packages is required for the second part of this workshop.
-
-<!---------------------------------------------------------------------------->
-
-## Prepare for the workshop
-
-Before the workshop, please join the RStudio Cloud space
-
-https://rstudio.cloud/spaces/94751/join?access_code=k%2F2tizN3wV8WABmBPwfvsV0jbitVdQ%2FTsJWHF5VJ
-
-After clicking the link you will be prompted to log in or create an account if you do not have one. Afterwards, you can click the button **Join Space**. On the Projects tab, you will see the project **Test framework**, which we will use in class.
-
-<!---------------------------------------------------------------------------->
-
-## Workshop Outline
+<ins>**Workshop Outline**</ins>
 
 - Introduction - 15 mins
 - Overview of the white paper - 20 mins
@@ -83,11 +66,21 @@ After clicking the link you will be prompted to log in or create an account if y
 
 <!---------------------------------------------------------------------------->
 
+## Prepare for the workshop
+
+Before the workshop, please join the RStudio Cloud space [here](https://rstudio.cloud/spaces/94751/join?access_code=k%2F2tizN3wV8WABmBPwfvsV0jbitVdQ%2FTsJWHF5VJ).
+
+After clicking the link you will be prompted to log in or create an account if you do not have one. Afterwards, you can click the button **Join Space**. On the Projects tab, you will see the project **Test framework**, which we will use in class.
+
+*Optional:* If you have time to spare, you can get familiar with the white paper [A Risk-based Approach for Assessing R Package Accuracy within a Validated Infrastructure](https://www.pharmar.org/white-paper/)
+
+<!---------------------------------------------------------------------------->
+
 ## Resources
 
-- GitHub repository for `riskmetric`: https://github.com/pharmaR/riskmetric
-- GitHub repository for the Risk Assessment Shiny Application: https://github.com/pharmaR/risk_assessment
-- R Validation Hub's white paper: https://www.pharmar.org/white-paper/
+- GitHub repository for [`riskmetric`](https://github.com/pharmaR/riskmetric)
+- GitHub repository for the [Risk Assessment Shiny Application](https://github.com/pharmaR/risk_assessment)
+- [R Validation Hub's white paper](https://www.pharmar.org/white-paper/)
 - PSI Special Interest Group paper: [Application and Implementation of Methodologies in Statistics (AIMS)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjOxuW7uYfsAhVEwFkKHVUzBOQQFjAAegQIBRAB&url=https%3A%2F%2Fwww.psiweb.org%2Fdocs%2Fdefault-source%2Fdefault-document-library%2Fwant-to-use-r-here-are-some-top-tips-before-you-start-20171027.docx%3Fsfvrsn%3Dab5dfdb_0&usg=AOvVaw1JWwlz0z_k0V5UPlBZxUUD)
 
 <!---------------------------------------------------------------------------->
