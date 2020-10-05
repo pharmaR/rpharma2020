@@ -79,6 +79,7 @@ After clicking the link you will be prompted to log in or create an account if y
 - GitHub repository for `riskmetric`: https://github.com/pharmaR/riskmetric
 - GitHub repository for the Risk Assessment Shiny Application: https://github.com/pharmaR/risk_assessment
 - R Validation Hub's white paper: https://www.pharmar.org/white-paper/
+- PSI Special Interest Group paper: [Application and Implementation of Methodologies in Statistics (AIMS)](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjOxuW7uYfsAhVEwFkKHVUzBOQQFjAAegQIBRAB&url=https%3A%2F%2Fwww.psiweb.org%2Fdocs%2Fdefault-source%2Fdefault-document-library%2Fwant-to-use-r-here-are-some-top-tips-before-you-start-20171027.docx%3Fsfvrsn%3Dab5dfdb_0&usg=AOvVaw1JWwlz0z_k0V5UPlBZxUUD)
 
 <!---------------------------------------------------------------------------->
 
