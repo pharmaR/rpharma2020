@@ -34,9 +34,15 @@ knitr::opts_chunk$set(echo = TRUE, results = "hide", error = FALSE,
 - Andy Nicholls, GSK
 - Marly Gotti, Biogen
 
+### Welcome
+
+Thank you for enrolling in this workshop! 
+
+In this site you can find information about the workshop as well as the steps you need to follow to prepare for it.
+
 ### Overview
 
-In this workshop we will walk through an implementation of the R Validation Hub's white paper: [A Risk-based Approach for Assessing R Package Accuracy within a Validated Infrastructure](https://www.pharmar.org/white-paper/). The workshop will explore two core themes:
+In the workskop, we will walk through an implementation of the R Validation Hub's white paper: [A Risk-based Approach for Assessing R Package Accuracy within a Validated Infrastructure](https://www.pharmar.org/white-paper/). The workshop will explore two core themes:
 
 1. R Packages Risk Assessment
 2. Testing 
