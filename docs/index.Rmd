@@ -61,11 +61,16 @@ After clicking the link you will be prompted to log in or create an account if y
 
 <!---------------------------------------------------------------------------->
 
-## Slides
+## Workshop Outline
 
-- Intro (Coming soon)
-- Risk Assessment (Coming soon)
-- Responding to a Risk Assessment (Coming soon)
+- Introduction - 15 mins
+- Overview of the white paper - 20 mins
+- BREAK - 10 mins
+- Risk Assessment Tools - 30 mins
+- Exercise - 30 mins
+- BREAK - 10 mins
+- Responding to Risk - 30 mins
+- Exercise - 30 mins
 
 <!---------------------------------------------------------------------------->
 
