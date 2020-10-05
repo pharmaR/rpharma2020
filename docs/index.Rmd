@@ -8,6 +8,8 @@ output:
     theme: hpstr
     toc: yes
     css: style.css
+    includes:
+       in_header: google_analytics.html
     # includes:
     #   after_body: footer.Rhtml
 toc-title: "Table of Contents"
