@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Testing</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/default.css" type="text/css" />
+    <link rel="stylesheet" href="css/default-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/metropolis.css" type="text/css" />
+    <link rel="stylesheet" href="css/metropolis-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="css/custom.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+layout: false
+class: title-slide, middle, center
+
+.pull-farleft[
+
+.font180[Testing]
+
+R/Pharma Conference, 2020 &lt;br&gt;
+Andy Nicholls
+
+
+]
+.pull-farright[
+
+
+
+]
+
+&lt;!----------------------------------------------------------------------------&gt;
+
+---
+# Responding to Risk
+
+An R package risk assessment may result in a classification:
+
+* High 
+* Medium 
+* Low
+
+What does this mean for us?
+
+---
+# Low Risk 1
+
+Can anyone think of a low risk software built for statistical analysis?
+
+How do we respond to this low risk?
+
+---
+# An Ideal World
+
+- Requirements for the software are defined (and documented) up front
+- Software developers create **unit tests** as they develop the software
+- **Integration tests** ensure that the software works when modules are combined
+- **System tests** helps ensure that the software as a whole meets its requirements
+
+
+- To validate a system we must confirm that it meets our own expectations
+- We document our own requirements and **User Acceptance Testing** ensures that the software meets these requirements
+
+---
+# In other words...
+
+- The V-model
+
+&lt;img src="images/vmodel.png" alt="V-Model"&gt;
+
+*Source: https://medium.com/software-engineering-kmitl/v-model-3a71622b3d82*
+
+Note: Definitions of 'Validation' and 'Verification' in the V-model don't entirely align with our workshop definitions
+
+
+---
+layout: false
+class: inverse, middle, center
+# But do we actually need to *validate* R?
+
+
+---
+# ICH E9
+
+&gt; **Integrity of Data and Computer Software Validity**
+
+&gt; The credibility of the numerical results of the analysis depends on the quality and validity of the methods and software (both internally and externally written) used both for data management (data entry, storage, verification, correction and retrieval) and also for processing the data statistically. Data management activities should therefore be based on thorough and effective standard operating procedures. The computer software used for data management and statistical analysis should be reliable, and documentation of appropriate software testing procedures should be available.
+
+---
+# But do we actually need to *validate* R?
+
+- We need to ensure that it is *reliable*
+- "Documentation of *appropriate* software testing procedures should be available"
+
+
+- We may not need to *validate* R packages but we do need to ensure that the implementation of statistical methods is reliable
+- This means doing our homework (performing a risk assessment) and *documenting* our decision
+- It *may* mean testing against our requirements
+
+---
+# Low Risk
+
+- Lower risk packages usually have a well-developed SDLC
+    - Including appropriate unit tests
+
+- Based on the evidence we may deem that no further testing is appropriate
+- We may wish to run package unit tests as part of an Operational Qualification
+
+&gt; *"These tests are also available to end users and/or system administrators and can be run as part of their
+installation process to provide further documentation and objective evidence as to the accuracy, reliability
+and consistency of their installation of R."* - https://www.r-project.org/doc/R-FDA.pdf
+
+
+--- 
+# An EMA Perspective
+
+&gt; *"The sponsor may rely on qualification documentation provided by the vendor, if the qualification activities performed by the vendor have been assessed as adequate. However, the sponsor may also have to perform additional qualification (and validation) activities based on a documented risk assessment."* - [Notice to sponsors on validation and qualification of computerised systems used in clinical trials, EMA, 07-Apr-2020](https://www.ema.europa.eu/en/documents/regulatory-procedural-guideline/notice-sponsors-validation-qualification-computerised-systems-used-clinical-trials_en.pdf)
+
+---
+# High Risk
+
+- Some R packages are medium/high risk for us
+
+- For a higher risk R package
+
+1. No requirements 
+2. Little / no testing
+
+- So how can we ensure that the packages we use are reliable?
+
+---
+# Reminder of the V-model
+
+&lt;img src="images/vmodel.png" alt="V-Model"&gt;
+
+---
+# Retrospective Action
+
+- We cannot control the code
+
+- But we can:
+    - define our own requirements
+    - test against our requirements
+
+---
+# Discussion
+
+&gt; "Tests should be written for all statistical modelling functions within an Intended for Use Statistical Package, regardless of the risk assessment." - https://www.pharmar.org/white-paper/
+
+- Is this always necessary?
+
+---
+# Example
+
+## The `coxph` function (survival package)
+
+- The `coxph` function is used by universities around the world to teach the Cox proportional hazards regression model
+- It is referenced widely in literature
+- It has been part of Core R since v-1.0 (available on CRAN since 2001)
+- It is within the scope of [R: Regulatory Compliance and Validation Issues...](https://www.r-project.org/doc/R-FDA.pdf)
+- It has existing tests written by survival modelling experts
+
+- How much further can I reduce my risk by writing additional tests?
+
+
+---
+layout: false
+class: inverse, middle, center
+# Implementation
+
+---
+# Defining Requirements
+
+- It is assumed that your organisation has it's own methodology for defining requirements already
+
+- Various frameworks exist, eg the MoSCoW prioritisation
+    - Must
+    - Should
+    - Could
+    - Would / Won't
+
+- Consider how you intend on using the package
+
+---
+# Developing Tests
+
+- Tests should be written to satisfy user requirements
+
+&gt; *I **must** be able to fit a linear model* [See 'MoSCoW method']
+
+- We therefore test the packages as they are intended to be used
+
+- A unit test should test for *accuracy*
+
+- Repeated testing will ensure *reproducibility* and our supporting processes should ensure *traceability*
+
+
+---
+# A Simple Example
+
+- Here we test the `mean` function
+
+- A mean is easy to verify for a simple case, eg `mean(1:3)`
+
+- We can check the expected result using testthat syntax
+
+`expect_equal(mean(1:3), 2)`
+
+---
+# A Bad Example
+
+- We could also use random numbers but this is harder to verify
+- An auditor might ask, "how do you know this is correct?"
+
+
+```r
+# Random generation of expected result
+set.seed(123)
+x &lt;- rnorm(100)
+mean(x)
+# Check that this can be replicated
+expect_equal(mean(x),  0.09040591)
+```
+
+---
+# Testing for Accuracy (Correctness)
+
+&gt; *"Functional correctness refers to the input-output behavior of the algorithm (i.e., for each input it produces the expected output"* - Dunlop, Douglas D.; Basili, Victor R. (June 1982). "A Comparative Analysis of Functional Correctness". Communications of the ACM. 14 (2): 229–244
+
+
+- It is not necessary to review the underlying algorithm in the source code
+- Checking that a function returns expected results using known (eg published) results is sufficient
+- How many tests depends on the risk assessment and an organisation's aversion to risk!
+
+---
+# Testing for Correctness: Statistical Models
+
+
+```r
+test_that("Must be able to fit a linear model", {
+  # Data and results are taken from:
+  # Dobson AJ, Barnett AG.
+  # An Introduction to Generalized Linear Models. 3rd ed
+  # CRC Press. 2008.
+
+  # table 6.3 page 96
+  d &lt;- data.frame(
+    carbohydrate = c(33, 40, 37, 27, 30, 43, 34, 48, 30, 38, 50, 51, 30, 36, 41, 42, 46, 24, 35, 37),
+    age = c(33, 47, 49, 35, 46, 52, 62, 23, 32, 42, 31, 61, 63, 40, 50, 64, 56, 61, 48, 28),
+    weight = c(100, 92, 135, 144, 140, 101, 95, 101, 98, 105, 108, 85, 130, 127, 109, 107, 117, 100, 118, 102),
+    protein = c(14, 15, 18, 12, 15, 15, 14, 17, 15, 14, 17, 19, 19, 20, 15, 16, 18, 13, 18, 14)
+  )
+
+  fit &lt;- lm(carbohydrate ~ age + weight + protein, data = d)
+
+  # table 6.4 page 97
+  expect_equivalent(
+    round(coefficients(fit), 3),
+    c(36.960, -0.114, -0.228, 1.958)
+  )
+
+})
+```
+
+
+
+
+&lt;!-- --- --&gt;
+&lt;!-- # Accountability --&gt;
+
+&lt;!-- Regardless of who develops the software, the accountability for the quality of the testing lies with the person/company using the software. --&gt;
+
+
+
+
+
+
+---
+# Exercise
+
+## Scenario (hypothetical): 
+
+&gt; We have found a great package for data manipulation (called 'riskydplyr') and wish to use it generate ADaM data.  We have put the package through our risk assessment.  The package offers exactly the same functionality as 'dplyr' but it has no tests and questionable SDLC (no code on GitHub).  But it has scored well in terms of community usage and seems to be well established.  We have determined it to be medium risk.
+
+## Exercise
+
+- Back in groups
+    - Define our requirements for the package [15 minutes]
+    - Develop tests against these requirements using the given framework [15 minutes]
+
+- For the following discussion
+    - Did the risk score factor affect your approach?
+    - Did the risk score factor affect your testing?
+
+---
+# Volume of Tests
+
+- Focus on highest risk functionality:
+    - Functions that will be used by an end user
+    - Those that are hardest to verify (eg statistical model output)
+
+- Our risk assessment should factor into our testing strategy
+
+
+    
+    
+# Closing Discussion
+
+---
+## Scenario (hypothetical): 
+
+&gt; We have found a package that implements a novel implementation of MMRM (Mixed model Repeated Measures).  The author has not shared any of their code publicly but they have shared some details of their SDLC and it meets our expectations of a good SDLC.  Previous packages by the author have been widely used by other pharma (including MMRM implementations) and we underderstand that regulators have accepted submissions where the these packages have been used to analyse the primary endpoint.  The package contains tests that we can use for qualification.  
+
+- Question: Do we need to write additional requirements/tests before using this package for regulatory work?
+
+
+---
+## Scenario (hypothetical): 
+
+&gt; We have found a package that implements a novel implementation of MMRM (Mixed model Repeated Measures).  The author has not shared any of their code publicly but they have shared some details of their SDLC and it meets our expectations of a good SDLC.  Previous packages by the author have been widely used by other pharma (including MMRM implementations) and we underderstand that regulators have accepted submissions where the these packages have been used to analyse the primary endpoint.  The package contains tests that we can use for qualification.
+
+- Question: Do we need to write additional requirements/tests before using this package for regulatory work?
+
+- The package author is a company (called 'RAS')
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "13:9",
+"highlightLanguage": "R",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
