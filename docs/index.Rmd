@@ -10,8 +10,6 @@ output:
     css: style.css
     includes:
       in_header: google_analytics.html
-    # includes:
-    #   after_body: footer.Rhtml
 toc-title: "Table of Contents"
 pagetitle: "Workshop"
 ---
@@ -30,8 +28,17 @@ knitr::opts_chunk$set(echo = TRUE, results = "hide", error = FALSE,
 
 ## Presenters
 
-- Andy Nicholls, GSK
-- Marly Gotti, Biogen
+<div class="row">
+<div class="column">
+  <img class="profile-picture" src="./slides/images/andy-nicholls.jpg" alt="Andy Nicholls">
+  <div class="profile-name">Andy Nicholls</div>
+</div>
+
+<div class="column">
+  <img class="profile-picture" src="./slides/images/marly-gotti.jpg" alt="Marly Gotti">
+  <div class="profile-name">Marly Gotti</div>
+</div>
+</div>
 
 ## Welcome
 
@@ -87,7 +94,7 @@ After clicking the link you will be prompted to log in or create an account if y
 
 ## Resources
 
-- Poll results from the workshop: [poll results](slides/images/Poll.png).
+- Poll results from the workshop: [poll results](slides/images/Poll.png)
 - GitHub repository for [`riskmetric`](https://github.com/pharmaR/riskmetric)
 - GitHub repository for the [Risk Assessment Shiny Application](https://github.com/pharmaR/risk_assessment)
 - [R Validation Hub's white paper](https://www.pharmar.org/white-paper/)

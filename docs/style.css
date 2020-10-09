@@ -34,3 +34,27 @@ a {
   background-color: #68B8E5;
 }
 
+.profile-picture {
+  border-radius: 50%;
+  width: 70%;
+}
+
+.profile-name {
+  font-size: 15px;
+  padding-top: 10px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  margin-left: 0;
+  padding-left: 0;
+  padding-right: 60%;
+  text-align: center;
+}
+
+.column {
+  flex: 50%;
+  padding: 0;
+  margin: 0;
+}
