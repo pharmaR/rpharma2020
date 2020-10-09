@@ -1,0 +1,40 @@
+/* Hide slide numbers. */
+.remark-slide-number {
+  display: none;
+}
+
+.development {
+  background-color: #FF4D33;
+  border-top: 80px solid #FF4D33;
+  color: #000000;
+  text-shadow: none;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 100px;
+}
+
+.profile-name {
+  font-size: 15px;
+}
+
+.row {
+  display: flex;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 60px;
+}
+
+.column {
+  flex: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.bg-logo {
+  background-color: white;
+  background-image: url(../images/logo.png);
+  background-repeat: repeat;
+  background-size: 50%;
+}

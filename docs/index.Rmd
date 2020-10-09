@@ -66,6 +66,15 @@ In part 2, we will discuss how testing can be used to reduce the risk for those 
 
 <!---------------------------------------------------------------------------->
 
+## Slides
+
+- [Introduction & Overview of the White Paper](./slides/Introduction.html)
+- [Risk Assessment Tools](./slides/Risk_Assessment_Tools.html)
+- [Responding to Risk: Testing](./slides/Testing.html)
+
+<!---------------------------------------------------------------------------->
+
+
 ## Prepare for the workshop
 
 Before the workshop, please join the RStudio Cloud space [here](https://rstudio.cloud/spaces/94751/join?access_code=k%2F2tizN3wV8WABmBPwfvsV0jbitVdQ%2FTsJWHF5VJ).
@@ -78,6 +87,7 @@ After clicking the link you will be prompted to log in or create an account if y
 
 ## Resources
 
+- Poll results from the workshop: [poll results](slides/images/Poll.png).
 - GitHub repository for [`riskmetric`](https://github.com/pharmaR/riskmetric)
 - GitHub repository for the [Risk Assessment Shiny Application](https://github.com/pharmaR/risk_assessment)
 - [R Validation Hub's white paper](https://www.pharmar.org/white-paper/)
