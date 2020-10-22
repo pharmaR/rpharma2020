@@ -108,7 +108,7 @@ We would like to thank
 
   - the R Validation Hub (PSI, EFR Consortium)
   - the wonderful TA's that were instrumental in facilitating the discussion
-  during the execises:
+  during the exercises:
     - Keaven Anderson (MSD)
     - Yilong Zhang (MSD)
     - Paulo Bargo (Janssen)
