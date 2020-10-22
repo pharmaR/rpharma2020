@@ -77,7 +77,7 @@ In part 2, we will discuss how testing can be used to reduce the risk for those 
 
 - [Introduction & Overview of the White Paper](./slides/Introduction.html)
 - [Risk Assessment Tools](./slides/Risk_Assessment_Tools.html)
-- [Responding to Risk: Testing](./slides/Testing.html) (exercise materials can be found in the zip file [test_exercise.zip](test_exercise.zip)).
+- [Responding to Risk: Testing](./slides/Testing.html) (exercise materials can be found in the zip file [test_exercise.zip](test_exercise.zip))
 - [Workshop Video](https://youtu.be/9AiJSEZAz4g)
 
 <!---------------------------------------------------------------------------->
