@@ -102,7 +102,27 @@ After clicking the link you will be prompted to log in or create an account if y
 
 <!---------------------------------------------------------------------------->
 
-## The R Validation Hub
+## Acknowledgements
+
+We would like to thank
+
+  - the R Validation Hub (PSI, EFR Consortium)
+  - the wonderful TA's that were instrumental in facilitating the discussion
+  during the execises:
+    - Keaven Anderson (MSD)
+    - Yilong Zhang (MSD)
+    - Paulo Bargo (Janssen)
+    - Magda Zwierzyna (GSK)
+    - Juliane Manitz (EMD Serono)
+    - Eli Miller (Atorus Research)
+  - the team working on `riskmetric`
+  - the team working on the `Risk Assessment App`
+
+Thanks to all those involved in pulling together the R/Pharma conference!
+
+<!---------------------------------------------------------------------------->
+
+## About the R Validation Hub
 
 R Validation Hub is a cross-industry initiative whose mission
 is to enable the use of R by the Bio-Pharmaceutical Industry in a regulatory setting, where the output may be used in submissions to regulatory agencies.
